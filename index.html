@@ -726,61 +726,62 @@
         </g>
 
         <!-- ICE（中央・窓口／総合エンジニアリング） -->
-        <g class="org-node" transform="translate(340,210)">
-          <rect class="org-box org-box-ice" width="220" height="210" rx="10"/>
-          <text class="org-role" x="110" y="34" text-anchor="middle">窓口・総合エンジニアリング・PM</text>
+        <g class="org-node" transform="translate(340,220)">
+          <rect class="org-box org-box-ice" width="220" height="200" rx="10"/>
+          <text class="org-role" x="110" y="34" text-anchor="middle">窓口・総合エンジニアリング</text>
           <text class="org-name" x="110" y="72" text-anchor="middle">ICE</text>
           <text class="org-duty" x="110" y="104" text-anchor="middle">・ご契約窓口の一本化</text>
           <text class="org-duty" x="110" y="128" text-anchor="middle">・計測計画の策定・品質管理</text>
-          <text class="org-duty" x="110" y="152" text-anchor="middle">・総合エンジ（図面化・改善提案）</text>
+          <text class="org-duty" x="110" y="152" text-anchor="middle">・図面化・強度検討・改善提案</text>
           <text class="org-duty" x="110" y="176" text-anchor="middle">・プロジェクト管理・定期報告</text>
         </g>
 
         <!-- JIT（デジタルエンジニアリング） -->
-        <g class="org-node" transform="translate(40,210)">
-          <rect class="org-box org-box-partner" width="220" height="210" rx="10"/>
+        <g class="org-node" transform="translate(20,220)">
+          <rect class="org-box org-box-partner" width="220" height="200" rx="10"/>
           <text class="org-role" x="110" y="34" text-anchor="middle">デジタルエンジニアリング</text>
-          <text class="org-name" x="110" y="72" text-anchor="middle">JIT</text>
-          <text class="org-duty org-duty-sm" x="110" y="92" text-anchor="middle">JI Technovation Private Limited</text>
+          <text class="org-name" x="110" y="70" text-anchor="middle">JIT</text>
+          <text class="org-duty org-duty-sm" x="110" y="90" text-anchor="middle">JI Technovation Private Limited</text>
           <text class="org-duty" x="110" y="118" text-anchor="middle">・点群データ処理・メッシュ化</text>
-          <text class="org-duty" x="110" y="142" text-anchor="middle">・CADモデル化（サーフェス／ソリッド）</text>
+          <text class="org-duty" x="110" y="142" text-anchor="middle">・CADモデル化（サーフェス等）</text>
           <text class="org-duty" x="110" y="166" text-anchor="middle">・精度検証（点群 vs CAD 照合）</text>
         </g>
 
         <!-- ナベヤ製作所（計測） -->
-        <g class="org-node" transform="translate(640,210)">
-          <rect class="org-box org-box-partner" width="220" height="210" rx="10"/>
+        <g class="org-node" transform="translate(660,220)">
+          <rect class="org-box org-box-partner" width="220" height="200" rx="10"/>
           <text class="org-role" x="110" y="34" text-anchor="middle">計測</text>
-          <text class="org-name org-name-sm" x="110" y="72" text-anchor="middle">ナベヤ製作所</text>
+          <text class="org-name org-name-sm" x="110" y="70" text-anchor="middle">ナベヤ製作所</text>
           <text class="org-duty" x="110" y="104" text-anchor="middle">・点群データ取得（岐阜県）</text>
           <text class="org-duty org-duty-sm" x="110" y="128" text-anchor="middle">・FAROアーム等／レーザートラッカー</text>
           <text class="org-duty" x="110" y="152" text-anchor="middle">・計測立会・初期データ確認</text>
         </g>
 
-        <!-- H-ONE ⇄ ICE -->
-        <path class="org-link" d="M450 172 C 450 190, 450 190, 450 208" fill="none" marker-end="url(#org-arrow)"/>
-        <path class="org-link org-link-dashed" d="M450 330 C 450 290, 450 250, 450 212" fill="none" marker-end="url(#org-arrow)"/>
-        <text class="org-link-label" x="462" y="196">要件・合意</text>
-        <text class="org-link-label" x="462" y="278">成果物・報告</text>
+        <!-- H-ONE ⇄ ICE（要件・合意／成果物・報告） -->
+        <path class="org-link" d="M430 174 L430 216" fill="none" marker-end="url(#org-arrow)"/>
+        <path class="org-link org-link-dashed" d="M470 216 L470 176" fill="none" marker-end="url(#org-arrow)"/>
+        <text class="org-link-label" x="400" y="196" text-anchor="middle">要件・合意</text>
+        <text class="org-link-label" x="505" y="196" text-anchor="middle">成果物・報告</text>
 
-        <!-- ICE ⇄ JIT -->
-        <path class="org-link" d="M262 300 H 338" fill="none" marker-end="url(#org-arrow)"/>
-        <path class="org-link org-link-dashed" d="M338 330 H 262" fill="none" marker-end="url(#org-arrow)"/>
-        <text class="org-link-label" x="250" y="292">CADモデル・図面</text>
-        <text class="org-link-label" x="258" y="352">処理委託</text>
+        <!-- ICE ⇄ JIT（委託・成果物） -->
+        <path class="org-link" d="M242 280 H 338" fill="none" marker-end="url(#org-arrow)"/>
+        <path class="org-link org-link-dashed" d="M338 340 H 242" fill="none" marker-end="url(#org-arrow)"/>
+        <text class="org-link-label" x="246" y="272">CADモデル・図面</text>
+        <text class="org-link-label" x="272" y="352">処理委託</text>
 
-        <!-- ICE ⇄ ナベヤ -->
-        <path class="org-link" d="M562 300 H 638" fill="none" marker-end="url(#org-arrow)"/>
-        <path class="org-link org-link-dashed" d="M638 330 H 562" fill="none" marker-end="url(#org-arrow)"/>
-        <text class="org-link-label" x="572" y="292">計測計画</text>
-        <text class="org-link-label" x="572" y="352">点群データ</text>
+        <!-- ICE ⇄ ナベヤ（計画・データ） -->
+        <path class="org-link" d="M562 280 H 658" fill="none" marker-end="url(#org-arrow)"/>
+        <path class="org-link org-link-dashed" d="M658 340 H 562" fill="none" marker-end="url(#org-arrow)"/>
+        <text class="org-link-label" x="566" y="272">計測計画</text>
+        <text class="org-link-label" x="568" y="352">点群データ</text>
 
         <!-- 役割分担の注記 -->
         <g class="org-footnote">
-          <rect x="40" y="440" width="820" height="112" rx="8" class="org-note-box"/>
+          <rect x="40" y="440" width="820" height="116" rx="8" class="org-note-box"/>
           <text x="60" y="470" class="org-note-title">役割分担のポイント</text>
-          <text x="60" y="496" class="org-note-text">・ご契約窓口は ICE に一本化（計測〜モデル化〜エンジニアリングまで）　・総合エンジニアリング（図面化・検討・改善提案）は ICE、デジタルエンジニアリング（点群処理・メッシュ化・CADモデル化・精度検証）は JIT が担当</text>
-          <text x="60" y="520" class="org-note-text">・計測はナベヤ製作所（岐阜県）が担当　・進捗・課題の定期報告（週次または随時）　・機密情報の管理（点群データ・図面の取り扱い規定に基づく）</text>
+          <text x="60" y="496" class="org-note-text">・ご契約窓口は ICE に一本化（計測〜モデル化〜エンジニアリングまで）　・計測はナベヤ製作所（岐阜県）が担当</text>
+          <text x="60" y="518" class="org-note-text">・総合エンジニアリング（図面化・検討・改善）は ICE、デジタルエンジニアリング（点群処理・メッシュ化・CADモデル化・精度検証）は JIT が担当</text>
+          <text x="60" y="540" class="org-note-text">・進捗・課題の定期報告（週次または随時）　・機密情報の管理（点群データ・図面の取り扱い規定に基づく）</text>
         </g>
       </svg>
     </div>
