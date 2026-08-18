@@ -86,7 +86,7 @@ check('顧客名「H-ONE」表記', html.includes('H-ONE'));
 check('「一番」表記を不使用', !html.includes('一番'));
 check('ナベヤ製作所の記載', html.includes('ナベヤ製作所'));
 check('岐阜県の記載', html.includes('岐阜県'));
-check('JIT社ベンチマークの記載', html.includes('JIT'));
+check('JIT（JI Technovation）ベンチマークの記載', html.includes('JIT'));
 check('マルチスズキの記載', html.includes('マルチスズキ'));
 check('JITセクションに推測の注記', /推測/.test(html) && /参考ベンチマーク/.test(html));
 check('icej.co.jp の記載', html.includes('icej.co.jp'));
