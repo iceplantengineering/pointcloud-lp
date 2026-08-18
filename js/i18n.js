@@ -32,7 +32,7 @@
     'お問い合わせ': 'Contact',
 
     /* ヒーロー */
-    'アイ・シー・エンジニアリング株式会社（ICE）× ナベヤ製作所（ナベヤ）× JI Technovation Private Limited（JIT）': 'I.C. Engineering Co., Ltd. (ICE) × Nabeya Manufacturing (NABEYA) × JI Technovation Private Limited (JIT)',
+    'アイ・シー・エンジニアリング株式会社（ICE）× ナベヤ製作所（ナベヤ）× JI Technovation Private Limited（JIT）': 'I.C. Engineering Co., Ltd. (ICE) × Japan Metrology Solution NABEYA MFG × JI Technovation Private Limited (JIT)',
     '点群計測 × リバースエンジニアリング': 'Point Cloud Measurement × Reverse Engineering',
     '溶接アッセンブリー治具のデジタル資産化': 'Digital Assetization of Welding Assembly Jigs',
     '図面のない治具も、点群データからCADモデルへ。': 'Jigs without drawings — from point cloud data to CAD models.',
@@ -64,10 +64,13 @@
     '点群データの取得からエンジニアリング・ハードウェア対応まで、': 'From point cloud acquisition to engineering and hardware support,',
     '一気通貫のフローとしてご提供します。': 'we offer an end-to-end, one-stop flow.',
     'ワンストップフロー図': 'One-stop flow diagram',
-    '点群データ取得、メッシュ化、CADモデル化、精度検証、エンジニアリング展開、ハードウェア対応の6工程。各工程の ICE／JIT／ナベヤ製作所／パートナー担当の色分けを示す。': 'Six steps: point cloud acquisition, meshing, CAD modeling, accuracy verification, engineering development, and hardware support. Colors indicate the responsible party for each step (ICE / JIT / Nabeya Manufacturing / partners).',
+    '点群データ取得、メッシュ化、CADモデル化、精度検証、エンジニアリング展開、ハードウェア対応の6工程。各工程の ICE／JIT／ナベヤ製作所／パートナー担当の色分けを示す。': 'Six steps: point cloud acquisition, meshing, CAD modeling, accuracy verification, engineering development, and hardware support. Colors indicate the responsible party for each step (ICE / JIT / Japan Metrology Solution NABEYA MFG / partners).',
     'ICE 担当': 'ICE',
     'パートナー担当': 'Partner',
-    'ICE＋JIT 協業': 'ICE + JIT',
+    'ICE＋パートナー': 'ICE + Partner',
+    'ICE＋JIT': 'ICE + JIT',
+    'ICE＋': 'ICE + ',
+    '協業（ICE＋JIT／ICE＋ナベヤ製作所）': 'Collaboration (ICE + JIT / ICE + NABEYA MFG)',
     '点群データ取得': 'Point Cloud Acquisition',
     'FAROアーム等／レーザートラッカー': 'FARO arm / laser tracker',
     '現地または協業パートナー工場にて': 'On-site or partner facility',
@@ -83,7 +86,7 @@
     '精度検証': 'Accuracy Verification',
     '点群 vs CAD 照合・偏差評価': 'Point cloud vs. CAD',
     '保証レベルは事前合意': 'Warranty agreed in advance',
-    'ICE＋ナベヤ製作所': 'ICE + Nabeya',
+    'ICE＋ナベヤ製作所': 'ICE + NABEYA MFG',
     'エンジニアリング展開': 'Engineering Development',
     '2D図面化・改善提案': '2D drawings & proposals',
     '強度・剛性の検討も可能': 'Strength / rigidity study',
@@ -94,18 +97,18 @@
     'パートナー': 'Partner',
     '主な成果物：': 'Main deliverables:',
     '点群データ（生データ／統合済）・メッシュモデル（STL等）・CADモデル（サーフェス／ソリッド）・精度検証レポート・2D図面・改善提案書・製作部品・更新治具': 'Point cloud data (raw/merged), mesh models (STL, etc.), CAD models (surface/solid), verification reports, 2D drawings, improvement proposals, fabricated parts, renewed jigs',
-    '※ 点群取得はナベヤ製作所、点群処理〜CADモデル化は ICE＋JIT、総合エンジニアリングは ICE が受け持ち、ハードウェアは内容に応じて製作パートナーと体制を組んでご提供します。': '※ Acquisition: Nabeya Manufacturing · Processing → CAD modeling: ICE + JIT · General engineering: ICE · Hardware: with fabrication partners',
-    'FAROアーム等／レーザートラッカーによる計測（ナベヤ製作所担当）': 'Measurement with FARO arm, etc. / laser tracker (Nabeya Manufacturing)',
+    '※ 点群取得・精度検証は ICE＋ナベヤ製作所、点群処理〜CADモデル化は ICE＋JIT、総合エンジニアリングは ICE が受け持ち、ハードウェアは内容に応じて製作パートナーと体制を組んでご提供します。': '※ Acquisition & verification: ICE + NABEYA MFG · Processing → CAD modeling: ICE + JIT · General engineering: ICE · Hardware: with fabrication partners',
+    'FAROアーム等／レーザートラッカーによる計測（ICE＋ナベヤ製作所）': 'Measurement with FARO arm, etc. / laser tracker (ICE + NABEYA MFG)',
     'ノイズ除去・統合・簡略化、STL／ポリゴンモデル生成（ICE＋JIT）': 'Noise removal, merging, simplification; STL / polygon model generation (ICE + JIT)',
     'サーフェス／ソリッド・設計意図を踏まえた再構築（ICE＋JIT）': 'Surface / solid rebuild reflecting design intent (ICE + JIT)',
-    '点群 vs CAD 照合・偏差評価（ICE＋JIT、保証レベルは事前合意）': 'Point cloud vs. CAD comparison and deviation evaluation (ICE + JIT; warranty level agreed in advance)',
+    '点群 vs CAD 照合・偏差評価（ICE＋ナベヤ製作所、保証レベルは事前合意）': 'Point cloud vs. CAD comparison and deviation evaluation (ICE + NABEYA MFG; warranty level agreed in advance)',
     '2D図面化・改善提案・強度剛性検討（ICE）': '2D drawings, improvement proposals, strength/rigidity analysis (ICE)',
     'ハードウェア対応': 'Hardware support',
     '部品製作・治具更新・調達（ICE窓口＋パートナー製作）': 'Parts fabrication, jig renewal, procurement (ICE window + partner fabrication)',
 
     /* 03 計測体制 */
     '計測体制 — 国内パートナーとの連携': 'Measurement Structure — Partnership with a Domestic Partner',
-    '岐阜県のナベヤ製作所（略称：ナベヤ）と連携し、国内で完結する計測体制を構築しています。': 'We have built a fully domestic measurement structure in partnership with Nabeya Manufacturing (NABEYA) in Gifu Prefecture.',
+    '岐阜県のナベヤ製作所（略称：ナベヤ）と連携し、国内で完結する計測体制を構築しています。': 'We have built a fully domestic measurement structure in partnership with Japan Metrology Solution NABEYA MFG (abbreviated as NABEYA) in Gifu Prefecture.',
     '測定方法と精度': 'Measurement Methods and Accuracy',
     'FAROアーム等': 'FARO arm, etc.',
     '（接触式・携帯型測定機）': '(contact-type, portable measuring device)',
@@ -120,10 +123,10 @@
     '数メートル級の大型構造でも安定した計測が可能': 'Stable measurement even for large structures of several meters',
     'ベースフレーム・ロケート位置の関係把握に最適': 'Ideal for understanding the relationship between the base frame and locate positions',
     '計測パートナー': 'Measurement partner',
-    'ナベヤ製作所': 'Nabeya Manufacturing',
+    'ナベヤ製作所': 'NABEYA MFG',
     '岐阜県': 'Gifu Prefecture',
-    '点群取得は、岐阜県のナベヤ製作所と連携した国内計測体制で対応します。ICE が計測計画・データ処理・モデル化の窓口となり、計測実施はナベヤ製作所が担います。現地計測が必要な場合も ICE が一手に引き受け、統一された手順・精度基準でデータを整えます。': 'Point cloud acquisition is handled through our domestic structure with Nabeya Manufacturing in Gifu Prefecture. ICE serves as the single window for measurement planning, data processing, and modeling, while Nabeya Manufacturing performs the measurements. Even when on-site measurement is required, ICE takes full responsibility and organizes data under unified procedures and accuracy standards.',
-    'ナベヤ製作所 公式サイト（sokutei.co.jp）→': 'Nabeya Manufacturing official website (sokutei.co.jp) →',
+    '点群取得は、岐阜県のナベヤ製作所と連携した国内計測体制で対応します。ICE が計測計画・データ処理・モデル化の窓口となり、計測実施はナベヤ製作所が担います。現地計測が必要な場合も ICE が一手に引き受け、統一された手順・精度基準でデータを整えます。': 'Point cloud acquisition is handled through our domestic structure with Japan Metrology Solution NABEYA MFG in Gifu Prefecture. ICE serves as the single window for measurement planning, data processing, and modeling, while NABEYA MFG performs the measurements. Even when on-site measurement is required, ICE takes full responsibility and organizes data under unified procedures and accuracy standards.',
+    'ナベヤ製作所 公式サイト（sokutei.co.jp）→': 'Japan Metrology Solution NABEYA MFG official website (sokutei.co.jp) →',
     '留意点': 'Important Notes',
     '対象物や測定環境によって、': 'Depending on the object and measurement environment,',
     'モデル化・点群取得の可能範囲は変動': 'the feasible range of modeling and point cloud acquisition may vary',
@@ -150,7 +153,7 @@
     '点群取得': 'Point cloud acquisition',
     'FAROアーム等（約0.05mm）／レーザートラッカー（約0.1mm）による非接触計測': 'Non-contact measurement with FARO arm, etc. (approx. 0.05 mm) / laser tracker (approx. 0.1 mm)',
     '対応可': 'Available',
-    'ナベヤ製作所（計測）＋ICE（計測計画・立会）': 'Nabeya Manufacturing (measurement) + ICE (planning, witnessing)',
+    'ナベヤ製作所（計測）＋ICE（計測計画・立会）': 'Japan Metrology Solution NABEYA MFG (measurement) + ICE (planning, witnessing)',
     '点群データ（生データ／統合済）': 'Point cloud data (raw / merged)',
     'ノイズ除去・複数視点データ統合・データ簡略化': 'Noise removal, multi-view data merging, data simplification',
     'メッシュモデル（STL等）': 'Mesh model (STL, etc.)',
@@ -176,7 +179,7 @@
     '製作部品・更新治具・検査成績書': 'Fabricated parts, renewed jigs, inspection certificates',
     '精度検証・保証レベルについて：': 'About accuracy verification and warranty level:',
     '「保証」の内容（対象部位・許容偏差・合格条件）は治具の使用目的に依存します。そのため、計測前に保証レベルを別途ご合意いただく「条件付き対応」としています。測定精度（約0.05mm／約0.1mm）と、お客様が要求されるモデル精度は別物であり、この区別を明確にすることがトラブルを防ぎます。': 'The scope of the “warranty” (target areas, allowable deviation, acceptance criteria) depends on the jig\u2019s purpose of use. We therefore treat it as a “conditional service,” with the warranty level agreed separately before measurement. Measurement accuracy (approx. 0.05 mm / approx. 0.1 mm) and the model accuracy you require are different things; making this distinction clear prevents misunderstandings.',
-    'ICE＋JIT 単独または計測パートナー（ナベヤ製作所）との協業で標準的に提供': 'Standard service provided by ICE + JIT alone or in collaboration with the measurement partner (Nabeya Manufacturing)',
+    'ICE＋JIT 単独または計測パートナー（ナベヤ製作所）との協業で標準的に提供': 'Standard service provided by ICE + JIT alone or in collaboration with the measurement partner (Japan Metrology Solution NABEYA MFG)',
     '事前合意事項（保証レベル・製作内容）の確定後に提供': 'Provided after prior agreement (warranty level, fabrication content) is finalized',
 
     /* 05 ベンチマーク */
@@ -211,7 +214,7 @@
     '予備調査・計測計画': 'Preliminary Survey and Measurement Plan',
     '対象治具の現状（サイズ・構成・表面状態）を確認し、計測機の選定（FAROアーム等／レーザートラッカー）、計測範囲・アライメント方式・所要時間を計画します。': 'Confirm the current state of the target jig (size, configuration, surface condition), select the measuring device (FARO arm, etc. / laser tracker), and plan the measurement range, alignment method, and required time.',
     '計測計画書・計測見積り': 'Measurement plan and quotation',
-    'ナベヤ製作所＋ICE': 'Nabeya Manufacturing + ICE',
+    'ナベヤ製作所＋ICE': 'NABEYA MFG + ICE',
     '計画に基づき現地または協業先で点群を取得します。ICE が立会・手順管理を行い、不足なく取得できているかをその場で確認します。': 'Acquire point clouds on-site or at a partner location according to the plan. ICE witnesses and manages procedures, verifying on the spot that data is captured without omissions.',
     'メッシュ化・CADモデル化': 'Meshing and CAD Modeling',
     'ノイズ除去・統合を行いメッシュを生成した後、使用目的に応じてサーフェス／ソリッドモデルへ再構築します。単なる形状トレースではなく、設計意図を踏まえたモデル化を行います。': 'After noise removal and merging to generate a mesh, rebuild into surface/solid models according to the purpose of use. Modeling reflects design intent rather than mere shape tracing.',
@@ -276,10 +279,10 @@
     'チェックリストの内容を相談する': 'Consult Us About the Checklist',
 
     /* 08 体制 */
-    '体制 — 役割分担（ICE・JIT・ナベヤ製作所）': 'Organization — Roles (ICE / JIT / Nabeya Manufacturing)',
-    'H-ONE 様に対して、ICE（窓口・総合エンジニアリング）、JIT（デジタルエンジニアリング）、ナベヤ製作所（計測）が役割と責任範囲を分担してご提供します。': 'For H-ONE, ICE (single window and general engineering), JIT (digital engineering), and Nabeya Manufacturing (measurement) share clearly defined roles and responsibilities.',
+    '体制 — 役割分担（ICE・JIT・ナベヤ製作所）': 'Organization — Roles (ICE / JIT / Japan Metrology Solution NABEYA MFG)',
+    'H-ONE 様に対して、ICE（窓口・総合エンジニアリング）、JIT（デジタルエンジニアリング）、ナベヤ製作所（計測）が役割と責任範囲を分担してご提供します。': 'For H-ONE, ICE (single window and general engineering), JIT (digital engineering), and Japan Metrology Solution NABEYA MFG (measurement) share clearly defined roles and responsibilities.',
     '体制図': 'Organization chart',
-    'H-ONE（顧客）と ICE（窓口・総合エンジニアリング・プロジェクト管理）、JIT（デジタルエンジニアリング）、ナベヤ製作所（計測）の関係を示す体制図。ICEが顧客との窓口を担う。': 'Organization chart showing the relationship between H-ONE (customer), ICE (single window, general engineering, project management), JIT (digital engineering), and Nabeya Manufacturing (measurement). ICE serves as the customer\u2019s single point of contact.',
+    'H-ONE（顧客）と ICE（窓口・総合エンジニアリング・プロジェクト管理）、JIT（デジタルエンジニアリング）、ナベヤ製作所（計測）の関係を示す体制図。ICEが顧客との窓口を担う。': 'Organization chart showing the relationship between H-ONE (customer), ICE (single window, general engineering, project management), JIT (digital engineering), and Japan Metrology Solution NABEYA MFG (measurement). ICE serves as the customer\u2019s single point of contact.',
     '顧客': 'Customer',
     '・使用目的・環境の確定': '· Confirm purpose & environment',
     '・保証レベルの合意・合否確認': '· Agree warranty & acceptance',
@@ -303,7 +306,7 @@
     '計測計画': 'Measurement plan',
     '点群データ': 'Point cloud data',
     '役割分担のポイント': 'Key Points of Role Sharing',
-    '・ご契約窓口は ICE に一本化（計測〜モデル化〜エンジニアリングまで） ・計測はナベヤ製作所（岐阜県）が担当': '· ICE: single contract window (measurement → modeling → engineering)  · Measurement: Nabeya Manufacturing (Gifu)',
+    '・ご契約窓口は ICE に一本化（計測〜モデル化〜エンジニアリングまで） ・計測はナベヤ製作所（岐阜県）が担当': '· ICE: single contract window (measurement → modeling → engineering)  · Measurement: Japan Metrology Solution NABEYA MFG (Gifu)',
     '・総合エンジニアリング（図面化・検討・改善）は ICE、デジタルエンジニアリング（点群処理・メッシュ化・CADモデル化・精度検証）は JIT が担当': '· General engineering (drawing, study, improvement): ICE · Digital engineering (processing, meshing, CAD modeling, verification): JIT',
     '・進捗・課題の定期報告（週次または随時） ・機密情報の管理（点群データ・図面の取り扱い規定に基づく）': '· Periodic progress & issue reports (weekly or as needed)  · Confidentiality management (point cloud & drawing handling rules)',
 
@@ -349,56 +352,78 @@
     return s.replace(/\s+/g, ' ').trim();
   }
 
+  /* 正規表現エスケープ + 辞書キーの空白を「任意の空白列」に緩和する正規表現を生成。
+     原文に全角スペース（U+3000）等が含まれる場合、辞書キー（正規化済み）がそのまま
+     原文に一致しないため、replace が失敗して日本語が残る不具合の対策。 */
+  function escapeRe(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  function buildRe(key) {
+    return new RegExp(escapeRe(key).replace(/\s+/g, '\\s+'));
+  }
+
   function applyLang(lang) {
     var en = lang === 'en';
 
-    // 1) テキストノード走査（script/style は除外）
-    var walker = document.createTreeWalker(
-      document,
-      NodeFilter.SHOW_TEXT,
-      {
-        acceptNode: function (n) {
-          var p = n.parentNode;
-          if (p && (p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE')) return NodeFilter.FILTER_REJECT;
-          return NodeFilter.FILTER_ACCEPT;
+    // 1) テキストノード
+    if (en) {
+      // 英語適用: 日本語ノードを走査して辞書翻訳（初回のみ原文を保存）
+      var walker = document.createTreeWalker(
+        document,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function (n) {
+            var p = n.parentNode;
+            if (p && (p.nodeName === 'SCRIPT' || p.nodeName === 'STYLE')) return NodeFilter.FILTER_REJECT;
+            return NodeFilter.FILTER_ACCEPT;
+          }
         }
-      }
-    );
-    var nodes = [];
-    var cur;
-    while ((cur = walker.nextNode())) nodes.push(cur);
+      );
+      var nodes = [];
+      var cur;
+      while ((cur = walker.nextNode())) nodes.push(cur);
 
-    nodes.forEach(function (node) {
-      var key = norm(node.nodeValue);
-      if (!key || !I18N_EN.hasOwnProperty(key)) return;
-      var rec = saved.filter(function (r) { return r.node === node; })[0];
-      if (!rec) {
-        rec = { node: node, orig: node.nodeValue };
-        saved.push(rec);
-      }
-      node.nodeValue = en ? rec.orig.replace(key, I18N_EN[key]) : rec.orig;
-    });
+      nodes.forEach(function (node) {
+        var key = norm(node.nodeValue);
+        if (!key || !I18N_EN.hasOwnProperty(key)) return;
+        var rec = saved.filter(function (r) { return r.node === node; })[0];
+        if (!rec) {
+          rec = { node: node, orig: node.nodeValue };
+          saved.push(rec);
+        }
+        // 正規化キーは原文（全角スペース等を含む）にそのまま一致しないため、
+        // 空白を任意の空白列にマッチさせる正規表現で置換する
+        node.nodeValue = rec.orig.replace(buildRe(key), function () { return I18N_EN[key]; });
+      });
+    } else {
+      // 日本語復元: 過去に翻訳したノードをすべて原文へ戻す
+      saved.forEach(function (r) { r.node.nodeValue = r.orig; });
+    }
 
-    // 2) 属性（data-i18n-attr）
+    // 2) 属性（data-i18n-attr / data-i18n-attr-2 / data-i18n-attr-3）
     var attrEls = document.querySelectorAll('[data-i18n-attr]');
     Array.prototype.forEach.call(attrEls, function (el) {
-      var jp = el.getAttribute('data-i18n-attr');
-      var attrName = el.getAttribute('data-i18n-attr-name');
-      if (!jp || !attrName) return;
-      var orig = el.getAttribute('data-i18n-attr-orig');
-      if (orig === null) {
-        orig = el.getAttribute(attrName) || '';
-        el.setAttribute('data-i18n-attr-orig', orig);
-      }
-      var enVal = I18N_EN[jp];
-      el.setAttribute(attrName, en ? (enVal || orig) : orig);
+      ['', '-2', '-3'].forEach(function (suffix) {
+        var jp = el.getAttribute('data-i18n-attr' + suffix);
+        var attrName = el.getAttribute('data-i18n-attr-name' + suffix);
+        if (!jp || !attrName) return;
+        var origKey = 'data-i18n-attr-orig' + suffix;
+        var orig = el.getAttribute(origKey);
+        if (orig === null) {
+          orig = el.getAttribute(attrName) || '';
+          el.setAttribute(origKey, orig);
+        }
+        var enVal = I18N_EN[jp];
+        el.setAttribute(attrName, en ? (enVal || orig) : orig);
+      });
     });
 
-    // 3) html lang / document.title
+    // 3) html lang / lang-en class
     document.documentElement.lang = lang;
     document.documentElement.classList.toggle('lang-en', en);
-    var t = document.querySelector('title');
-    if (t) document.title = t.textContent;
+    // ※ <title> はテキストノードとして 1) で翻訳・復元される。
+    //    document.title への代入は title 要素の textContent を差し替えるため
+    //    保存済みノードが切り離され、日本語復元が効かなくなる。代入しない。
 
     // 4) トグルUI状態
     var btn = document.getElementById('lang-toggle');
