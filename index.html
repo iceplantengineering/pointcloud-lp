@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="溶接アッセンブリー治具の点群計測とリバースエンジニアリングによるデジタル資産化。計測からCADモデル化・エンジニアリング・ハードウェア対応まで株式会社アイシーイーが一気通貫でご提供します。">
+<title>点群計測 × リバースエンジニアリング | 溶接アッセンブリー治具のデジタル資産化 — 株式会社アイシーイー</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════
+     固定ヘッダー・ナビゲーション
+════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="brand" aria-label="ICE トップへ">
+      <span class="brand-mark" aria-hidden="true">
+        <!-- テキストロゴ（仮置き）。ロゴ画像は使用しない -->
+        <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false">
+          <rect x="1.5" y="1.5" width="37" height="37" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 7v26M7 20h26" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".25"/>
+          <circle cx="20" cy="20" r="4.5" fill="currentColor"/>
+          <circle cx="11" cy="11" r="2" fill="currentColor" opacity=".55"/>
+          <circle cx="29" cy="11" r="2" fill="currentColor" opacity=".55"/>
+          <circle cx="11" cy="29" r="2" fill="currentColor" opacity=".55"/>
+          <circle cx="29" cy="29" r="2" fill="currentColor" opacity=".55"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">ICE</span>
+        <span class="brand-sub">株式会社アイシーイー</span>
+      </span>
+    </a>
+
+    <nav class="gnav" id="gnav" aria-label="セクションナビゲーション">
+      <a href="#challenges">課題</a>
+      <a href="#service">サービス全体像</a>
+      <a href="#measurement">計測体制</a>
+      <a href="#scope">提供範囲</a>
+      <a href="#benchmark">海外実績</a>
+      <a href="#process">進め方</a>
+      <a href="#checklist">確認項目</a>
+      <a href="#organization">体制</a>
+      <a href="#contact" class="gnav-cta">お問い合わせ</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════════════════════════════════
+     1. ヒーローセクション
+════════════════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <!-- 点群（ドットクラウド）アニメーション背景：js/main.js が点を生成 -->
+  <div class="pointcloud-bg" aria-hidden="true">
+    <svg id="pointcloud-svg" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800"></svg>
+    <div class="hero-scanline"></div>
+  </div>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow"><span class="eyebrow-tag">PROPOSAL</span> 株式会社アイシーイー × ナベヤ製作所</p>
+    <h1 class="hero-title">点群計測 × リバースエンジニアリング<br><span class="hero-title-sub">溶接アッセンブリー治具のデジタル資産化</span></h1>
+    <p class="hero-lead">図面のない治具も、点群データからCADモデルへ。<br class="pc-only">計測からエンジニアリング・ハードウェア対応まで、一気通貫でご提供します。</p>
+
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-primary btn-lg">お問い合わせはこちら</a>
+      <a href="#service" class="btn btn-ghost btn-lg">サービス全体像を見る</a>
+    </div>
+
+    <dl class="hero-stats">
+      <div class="hero-stat">
+        <dt>FAROアーム等による計測精度</dt>
+        <dd>約 <strong>0.05<span class="unit">mm</span></strong></dd>
+      </div>
+      <div class="hero-stat">
+        <dt>レーザートラッカーによる計測精度</dt>
+        <dd>約 <strong>0.1<span class="unit">mm</span></strong></dd>
+      </div>
+      <dd class="hero-note">※ 対象物・測定環境によりモデル化・点群取得の可能範囲は変動します。詳細は「計測体制」をご覧ください。</dd>
+    </dl>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span class="scroll-hint-line"></span>
+    <span class="scroll-hint-text">SCROLL</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     2. 課題セクション
+════════════════════════════════════════════════ -->
+<section class="section section-challenges" id="challenges">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">01 — CHALLENGES</p>
+      <h2 class="section-title">なぜ、いまリバースエンジニアリングなのか</h2>
+      <p class="section-lead">生産設備の長寿命化が進むほど、「図面のない治具」はリスク資産になります。<br class="pc-only">現物合わせの綱渡りから、数値で管理できるデジタル資産への転換が求められています。</p>
+    </header>
+
+    <div class="challenge-grid">
+      <article class="challenge-card reveal">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect x="8" y="10" width="32" height="26" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 18h20M14 24h20M14 30h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M30 38l4 6M18 38l-4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M36 6l4-4M12 6L8 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+          </svg>
+        </div>
+        <h3>図面・3Dデータの消失・散逸</h3>
+        <p>経年稼働とともに原图面が紛失・散逸し、補修や再製作のたびに「現物から採寸する」状態が常態化していませんか。担当者の変更で暗黙知も失われます。</p>
+      </article>
+
+      <article class="challenge-card reveal">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <path d="M6 30l8-8 6 5 8-12 14 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".35"/>
+            <path d="M6 36h36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M28 15l6 3-2-7z" fill="currentColor"/>
+            <circle cx="14" cy="22" r="2" fill="currentColor"/>
+            <circle cx="28" cy="15" r="2" fill="currentColor"/>
+            <circle cx="42" cy="21" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>精度劣化の定量化ができない</h3>
+        <p>経年変化・打痕・摩耗により基準面や位置決め部の精度は必ず劣化します。数値化されていないため「どこが・どれだけ劣化したか」を担保できず、品質議論が感度論に頼ります。</p>
+      </article>
+
+      <article class="challenge-card reveal">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <circle cx="17" cy="17" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="31" cy="31" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M22 22l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 42h36" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+          </svg>
+        </div>
+        <h3>補修部品の調達困難・現物合わせの反復</h3>
+        <p>部品メーカーの系列変更や廃番で補修部品が入手できず、都度の現物合わせ・試行錯誤が繰り返されます。復旧までの時間がそのままライン停止リスクになります。</p>
+      </article>
+
+      <article class="challenge-card reveal">
+        <div class="challenge-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true" focusable="false">
+            <rect x="8" y="14" width="26" height="22" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 20h14M14 26h14M14 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".4"/>
+            <path d="M34 30l6-6-3-3 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="45" cy="13" r="1.6" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>新規製作は高コスト・長リードタイム</h3>
+        <p>図面なしでの新規製作は、採寸・設計・試作・修正のループを伴い、コストと納期が読めません。「まだ使える治具」を延命する判断も、データがなく定量的な根拠を示せません。</p>
+      </article>
+    </div>
+
+    <div class="challenge-conclusion reveal">
+      <p><strong>「現物しかない」状態からの出発点として、点群データの取得が有効です。</strong></p>
+      <p>点群は治具の現状を加工・解体を伴わず非接触で丸ごと記録します。そこからCADモデル・図面・精度記録を整備すれば、補修・更新・新規設計のいずれの意思決定も数値に基づいて進められます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     3. サービス全体像（ワンストップフロー）
+════════════════════════════════════════════════ -->
+<section class="section section-service" id="service">
+  <div class="container container-wide">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">02 — ONE-STOP FLOW</p>
+      <h2 class="section-title">サービス全体像 — ワンストップフロー</h2>
+      <p class="section-lead">点群データの取得からエンジニアリング・ハードウェア対応まで、<br class="pc-only">一気通貫のフローとしてご提供します。</p>
+    </header>
+
+    <!-- SVGフロー図（PC向け。モバイルでは CSS で縦方向に切替） -->
+    <div class="flow-wrap reveal">
+      <svg class="flow-svg" viewBox="0 0 1160 420" role="img" aria-labelledby="flow-title flow-desc">
+        <title id="flow-title">ワンストップフロー図</title>
+        <desc id="flow-desc">点群データ取得、メッシュ化、CADモデル化、精度検証、エンジニアリング展開、ハードウェア対応の6工程。各工程の ICE 担当／パートナー担当の色分けを示す。</desc>
+        <defs>
+          <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+            <path d="M0 0 L8 4 L0 8 z" fill="#8fa3b8"/>
+          </marker>
+        </defs>
+
+        <!-- 凡例 -->
+        <g class="flow-legend">
+          <rect x="20" y="14" width="14" height="14" rx="3" class="legend-ice"/>
+          <text x="40" y="26" class="legend-text">ICE 担当</text>
+          <rect x="130" y="14" width="14" height="14" rx="3" class="legend-partner"/>
+          <text x="150" y="26" class="legend-text">パートナー担当</text>
+          <rect x="264" y="14" width="14" height="14" rx="3" class="legend-both"/>
+          <text x="284" y="26" class="legend-text">ICE＋パートナー協業</text>
+        </g>
+
+        <!-- 1 点群データ取得 -->
+        <g class="flow-node" transform="translate(20,80)">
+          <rect class="node-box node-box-partner" width="170" height="120" rx="8"/>
+          <text class="node-num" x="14" y="30">1</text>
+          <text class="node-title" x="14" y="56">点群データ取得</text>
+          <text class="node-sub" x="14" y="78">FAROアーム等／レーザートラッカー</text>
+          <text class="node-sub" x="14" y="96">現地または協業パートナー工場にて</text>
+          <text class="node-owner owner-partner-text" x="14" y="114">パートナー：計測</text>
+        </g>
+        <path class="flow-arrow" d="M190 140 h38" marker-end="url(#arrowhead)"/>
+
+        <!-- 2 メッシュ化 -->
+        <g class="flow-node" transform="translate(228,80)">
+          <rect class="node-box node-box-ice" width="170" height="120" rx="8"/>
+          <text class="node-num" x="14" y="30">2</text>
+          <text class="node-title" x="14" y="56">メッシュ化</text>
+          <text class="node-sub" x="14" y="78">ノイズ除去・統合・簡略化</text>
+          <text class="node-sub" x="14" y="96">STL／ポリゴンモデル生成</text>
+          <text class="node-owner owner-ice-text" x="14" y="114">ICE：データ処理</text>
+        </g>
+        <path class="flow-arrow" d="M398 140 h38" marker-end="url(#arrowhead)"/>
+
+        <!-- 3 CADモデル化 -->
+        <g class="flow-node" transform="translate(436,80)">
+          <rect class="node-box node-box-ice" width="170" height="120" rx="8"/>
+          <text class="node-num" x="14" y="30">3</text>
+          <text class="node-title" x="14" y="56">CADモデル化</text>
+          <text class="node-sub" x="14" y="78">サーフェス／ソリッド</text>
+          <text class="node-sub" x="14" y="96">設計意図を踏まえた再構築</text>
+          <text class="node-owner owner-ice-text" x="14" y="114">ICE：モデリング</text>
+        </g>
+        <path class="flow-arrow" d="M606 140 h38" marker-end="url(#arrowhead)"/>
+
+        <!-- 4 精度検証 -->
+        <g class="flow-node" transform="translate(644,80)">
+          <rect class="node-box node-box-both" width="170" height="120" rx="8"/>
+          <text class="node-num" x="14" y="30">4</text>
+          <text class="node-title" x="14" y="56">精度検証</text>
+          <text class="node-sub" x="14" y="78">点群 vs CAD 照合・偏差評価</text>
+          <text class="node-sub" x="14" y="96">保証レベルは事前合意</text>
+          <text class="node-owner owner-both-text" x="14" y="114">ICE＋計測パートナー</text>
+        </g>
+        <path class="flow-arrow" d="M814 140 h38" marker-end="url(#arrowhead)"/>
+
+        <!-- 5 エンジニアリング展開 -->
+        <g class="flow-node" transform="translate(852,80)">
+          <rect class="node-box node-box-ice" width="170" height="120" rx="8"/>
+          <text class="node-num" x="14" y="30">5</text>
+          <text class="node-title" x="14" y="56">エンジニアリング展開</text>
+          <text class="node-sub" x="14" y="78">2D図面化・改善提案</text>
+          <text class="node-sub" x="14" y="96">強度・剛性の検討も可能</text>
+          <text class="node-owner owner-ice-text" x="14" y="114">ICE：エンジニアリング</text>
+        </g>
+        <path class="flow-arrow" d="M1022 140 h38" marker-end="url(#arrowhead)"/>
+
+        <!-- 6 ハードウェア対応 -->
+        <g class="flow-node" transform="translate(1060,80)">
+          <rect class="node-box node-box-partner" width="80" height="120" rx="8"/>
+          <text class="node-num" x="12" y="30">6</text>
+          <text class="node-title node-title-sm" x="12" y="56">ハードウェア</text>
+          <text class="node-sub node-sub-sm" x="12" y="76">部品製作・</text>
+          <text class="node-sub node-sub-sm" x="12" y="92">治具更新</text>
+          <text class="node-owner owner-partner-text node-owner-sm" x="12" y="112">ICE＋</text>
+          <text class="node-owner owner-partner-text node-owner-sm" x="12" y="126">パートナー</text>
+        </g>
+
+        <!-- 成果物バンド -->
+        <g class="flow-deliverables">
+          <rect x="20" y="250" width="1120" height="60" rx="8" class="deliverable-band"/>
+          <text x="40" y="287" class="deliverable-label">主な成果物：</text>
+          <text x="150" y="287" class="deliverable-text">点群データ（生データ／統合済）・メッシュモデル（STL等）・CADモデル（サーフェス／ソリッド）・精度検証レポート・2D図面・改善提案書・製作部品・更新治具</text>
+        </g>
+
+        <!-- 注記 -->
+        <g class="flow-note">
+          <rect x="20" y="330" width="1120" height="44" rx="8" class="note-box"/>
+          <text x="40" y="358" class="note-text">※ 点群取得からCADモデル化までを ICE が受け持ち、エンジニアリング〜ハードウェアは内容に応じて協業パートナーと体制を組んでご提供します。</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- モバイル向けフロー（HTML版。PCでは非表示） -->
+    <ol class="flow-mobile" aria-label="ワンストップフロー（一覧）">
+      <li class="fm-item fm-partner"><span class="fm-num">1</span><div><strong>点群データ取得</strong><br><small>FAROアーム等／レーザートラッカーによる計測（パートナー担当）</small></div></li>
+      <li class="fm-item fm-ice"><span class="fm-num">2</span><div><strong>メッシュ化</strong><br><small>ノイズ除去・統合・簡略化、STL／ポリゴンモデル生成</small></div></li>
+      <li class="fm-item fm-ice"><span class="fm-num">3</span><div><strong>CADモデル化</strong><br><small>サーフェス／ソリッド・設計意図を踏まえた再構築</small></div></li>
+      <li class="fm-item fm-both"><span class="fm-num">4</span><div><strong>精度検証</strong><br><small>点群 vs CAD 照合・偏差評価（保証レベルは事前合意）</small></div></li>
+      <li class="fm-item fm-ice"><span class="fm-num">5</span><div><strong>エンジニアリング展開</strong><br><small>2D図面化・改善提案・強度剛性検討</small></div></li>
+      <li class="fm-item fm-partner"><span class="fm-num">6</span><div><strong>ハードウェア対応</strong><br><small>部品製作・治具更新・調達（ICE窓口＋パートナー製作）</small></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     4. 計測体制（ナベヤ製作所との連携）
+════════════════════════════════════════════════ -->
+<section class="section section-measurement" id="measurement">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">03 — MEASUREMENT</p>
+      <h2 class="section-title">計測体制 — 国内パートナーとの連携</h2>
+      <p class="section-lead">岐阜県のナベヤ製作所と連携し、国内で完結する計測体制を構築しています。</p>
+    </header>
+
+    <div class="measurement-grid">
+      <div class="measurement-main">
+        <h3 class="subheading reveal">測定方法と精度</h3>
+        <div class="method-cards reveal">
+          <div class="method-card">
+            <div class="method-head">
+              <span class="method-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true" focusable="false">
+                  <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M20 4v6M20 30v6M4 20h6M30 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                </svg>
+              </span>
+              <h4>FAROアーム等<br><span class="method-en">（接触式・携帯型測定機）</span></h4>
+            </div>
+            <p class="method-precision"><span class="precision-value">約 0.05</span><span class="precision-unit">mm</span></p>
+            <ul class="method-features">
+              <li>治具の部品単位・特徴部位の高精度計測に適する</li>
+              <li>持ち運び可能なため現場への搬入が容易</li>
+              <li>位置決め部・基準面など重点部位の採寸に最適</li>
+            </ul>
+          </div>
+
+          <div class="method-card">
+            <div class="method-head">
+              <span class="method-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" width="36" height="36" aria-hidden="true" focusable="false">
+                  <circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M6 12l28-6M6 28l28 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+                  <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                </svg>
+              </span>
+              <h4>レーザートラッカー<br><span class="method-en">（大寸法・基準構造計測）</span></h4>
+            </div>
+            <p class="method-precision"><span class="precision-value">約 0.1</span><span class="precision-unit">mm</span></p>
+            <ul class="method-features">
+              <li>治具全体の基準・配置関係の計測に適する</li>
+              <li>数メートル級の大型構造でも安定した計測が可能</li>
+              <li>ベースフレーム・ロケート位置の関係把握に最適</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="measurement-partner reveal">
+          <div class="partner-badge">
+            <span class="partner-label">計測パートナー</span>
+            <span class="partner-name">ナベヤ製作所</span>
+            <span class="partner-loc">岐阜県</span>
+          </div>
+          <p>点群取得は、岐阜県のナベヤ製作所と連携した国内計測体制で対応します。ICE が計測計画・データ処理・モデル化の窓口となり、計測実施はナベヤ製作所が担います。現地計測が必要な場合も ICE が一手に引き受け、統一された手順・精度基準でデータを整えます。</p>
+        </div>
+      </div>
+
+      <aside class="measurement-aside reveal">
+        <div class="caution-box">
+          <h4><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M12 3L2 21h20L12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="18" r="1.4" fill="currentColor"/></svg> 留意点</h4>
+          <p>対象物や測定環境によって、<strong>モデル化・点群取得の可能範囲は変動</strong>します。</p>
+          <p>このため当方は、計測の前に <strong>「使用目的」「使用環境」を明確にしてから計測計画を策定する</strong> 方針で進めます。</p>
+          <ul>
+            <li>要求されるモデル精度（測定精度とは別に定義）</li>
+            <li>治具のサイズ・形状・表面性状（光沢・暗色・油汚れ等）</li>
+            <li>計測可能な時間・場所（ライン停止の可否）</li>
+          </ul>
+          <p class="caution-link">→ 詳しい確認項目は <a href="#checklist">「使用目的・環境の確認項目」</a> で整理しています。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     5. スコープの区分け（提供範囲テーブル）
+════════════════════════════════════════════════ -->
+<section class="section section-scope" id="scope">
+  <div class="container container-wide">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">04 — SCOPE</p>
+      <h2 class="section-title">スコープの区分け — ICE の提供範囲</h2>
+      <p class="section-lead">工程ごとに、ICE がどこまで対応し、何を成果物としてお渡しできるかを整理しました。<br class="pc-only">「まずはどこまで、どの精度で」を顧客と合意するためのフレームワークとしてご活用ください。</p>
+    </header>
+
+    <div class="table-wrap reveal">
+      <table class="scope-table">
+        <thead>
+          <tr>
+            <th>工程</th>
+            <th>内容</th>
+            <th>提供可否</th>
+            <th>パートナー/体制</th>
+            <th>成果物</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cell-process">点群取得</td>
+            <td>FAROアーム等（約0.05mm）／レーザートラッカー（約0.1mm）による非接触計測</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ナベヤ製作所（計測）＋ICE（計測計画・立会）</td>
+            <td>点群データ（生データ／統合済）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">メッシュ化</td>
+            <td>ノイズ除去・複数視点データ統合・データ簡略化</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ICE</td>
+            <td>メッシュモデル（STL等）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">サーフェスモデル</td>
+            <td>点群・メッシュからのサーフェス再構築（外形状の忠実な再現）</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ICE</td>
+            <td>サーフェスモデル（IGES／STEP等）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">ソリッドモデル</td>
+            <td>機構として成立するソリッド化（設計意図の復元・簡略化含む）</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ICE</td>
+            <td>ソリッドモデル（STEP／Parasolid等）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">精度検証・保証レベル</td>
+            <td>点群 vs CADモデルの照合、偏差の可視化・定量化、合否判定</td>
+            <td><span class="scope-badge badge-cond">条件付き対応</span></td>
+            <td>ICE＋ナベヤ製作所</td>
+            <td>精度検証レポート（カラーマップ・偏差値）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">2D図面化</td>
+            <td>部品図・組立図の作成、公差・材質・仕上げ記載の整備</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ICE</td>
+            <td>2D図面（DWG／DXF／PDF）</td>
+          </tr>
+          <tr>
+            <td class="cell-process">エンジニアリング</td>
+            <td>強度・剛性検討、改善提案、類似治具への展開、技術文書化</td>
+            <td><span class="scope-badge badge-yes">対応可</span></td>
+            <td>ICE</td>
+            <td>検討書・改善提案書・技術資料</td>
+          </tr>
+          <tr>
+            <td class="cell-process">ハードウェア対応</td>
+            <td>補修部品・代替部品の製作、治具更新・一部新規製作</td>
+            <td><span class="scope-badge badge-cond">内容により対応</span></td>
+            <td>ICE（窓口）＋製作パートナー</td>
+            <td>製作部品・更新治具・検査成績書</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scope-note reveal">
+      <p><strong>精度検証・保証レベルについて：</strong>「保証」の内容（対象部位・許容偏差・合格条件）は治具の使用目的に依存します。そのため、計測前に保証レベルを別途ご合意いただく「条件付き対応」としています。測定精度（約0.05mm／約0.1mm）と、お客様が要求されるモデル精度は別物であり、この区別を明確にすることがトラブルを防ぎます。</p>
+    </div>
+
+    <div class="scope-legend reveal">
+      <span class="legend-item"><span class="scope-badge badge-yes">対応可</span> ICE 単独または計測パートナーとの協業で標準的に提供</span>
+      <span class="legend-item"><span class="scope-badge badge-cond">条件付き対応</span> 事前合意事項（保証レベル・製作内容）の確定後に提供</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     6. ベンチマーク: JIT社インド実績
+════════════════════════════════════════════════ -->
+<section class="section section-benchmark" id="benchmark">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">05 — BENCHMARK</p>
+      <h2 class="section-title">参考ベンチマーク — JIT社のインドでの実績</h2>
+      <p class="section-lead">インド市場でJIT社がマルチスズキ向けに治具のリバースエンジニアリングからエンジニアリング、ハードウェア受注までを成功させた事例を整理します。</p>
+    </header>
+
+    <div class="benchmark-banner reveal" role="note">
+      <p><strong>※ このセクションは参考ベンチマークです。推測を含みます。</strong><br>公開情報をもとに ICE が整理・推測した内容であり、JIT社・マルチスズキ公式見解ではありません。ビジネスモデルの考察部分は特に推測の度合いが高いため、参考情報としてご覧ください。</p>
+    </div>
+
+    <div class="benchmark-grid">
+      <div class="benchmark-case reveal">
+        <h3 class="subheading">事例サマリー（マルチスズキ向け）</h3>
+        <ol class="case-steps">
+          <li><strong>リバースエンジニアリング</strong> — 図面のない既存治具を計測し、CADモデル・図面を復元</li>
+          <li><strong>エンジニアリング作業</strong> — 復元データをもとに技術検討・改善・設計展開を実施</li>
+          <li><strong>ハードウェア受注</strong> — 検討結果を踏まえた部品・治具の製作受注まで獲得</li>
+        </ol>
+        <p class="case-region">対象市場：インド（現地計測＋設計リソースの組み合わせで対応）</p>
+      </div>
+
+      <div class="benchmark-insight reveal">
+        <h3 class="subheading">ビジネスモデルの考察（推測を含む）</h3>
+        <ul class="insight-list">
+          <li>
+            <h4>ワンストップ受注</h4>
+            <p>計測〜ハードウェアまで一括受注により、顧客の調達・管理の手間を集約。個別工程の分割発注より価格決定権と関係の深度が高まると推測されます。</p>
+          </li>
+          <li>
+            <h4>現地計測＋設計リソースの組み合わせ</h4>
+            <p>計測は現地で実施し、モデリング・設計は最適な場所のリソースで処理。実績から、計測と設計の担当を柔軟に分離・統合する体制が有効と考えられます。</p>
+          </li>
+          <li>
+            <h4>治具ライフサイクルにわたる長期関係構築</h4>
+            <p>一度デジタル化すれば、以降の補修・更新・類似治具展開は同じデータ資産から派生します。初回受注が長期収益の起点になる構造と推測されます。</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     7. 進め方（ステップ・ストーリーライン）
+════════════════════════════════════════════════ -->
+<section class="section section-process" id="process">
+  <div class="container container-wide">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">06 — PROCESS</p>
+      <h2 class="section-title">進め方 — Step 0 から始まるストーリーライン</h2>
+      <p class="section-lead">まず「何のために・どこまで」を合意するところから始め、計測・モデル化・検証・納品を経てエンジニアリング展開へつなげます。</p>
+    </header>
+
+    <ol class="steps">
+      <li class="step reveal" data-owner="customer">
+        <div class="step-head">
+          <span class="step-num">Step 0</span>
+          <span class="step-owner owner-customer">顧客＋ICE</span>
+        </div>
+        <h3>使用目的・環境の確認</h3>
+        <p>チェックリストで使用目的・使用環境・要求精度・ゴールを確認し、合意します。ここが曖昧なまま計測に入ると、後工程すべての手戻りにつながります。</p>
+        <div class="step-deliverables"><span>成果物</span>確認項目チェックリスト（合議済）・計測前提条件表</div>
+      </li>
+
+      <li class="step reveal" data-owner="ice">
+        <div class="step-head">
+          <span class="step-num">Step 1</span>
+          <span class="step-owner owner-ice">ICE</span>
+        </div>
+        <h3>予備調査・計測計画</h3>
+        <p>対象治具の現状（サイズ・構成・表面状態）を確認し、計測機の選定（FAROアーム等／レーザートラッカー）、計測範囲・アライメント方式・所要時間を計画します。</p>
+        <div class="step-deliverables"><span>成果物</span>計測計画書・計測見積り</div>
+      </li>
+
+      <li class="step reveal" data-owner="partner">
+        <div class="step-head">
+          <span class="step-num">Step 2</span>
+          <span class="step-owner owner-partner">ナベヤ製作所＋ICE</span>
+        </div>
+        <h3>点群データ取得</h3>
+        <p>計画に基づき現地または協業先で点群を取得します。ICE が立会・手順管理を行い、不足なく取得できているかをその場で確認します。</p>
+        <div class="step-deliverables"><span>成果物</span>点群データ（生データ／統合済）</div>
+      </li>
+
+      <li class="step reveal" data-owner="ice">
+        <div class="step-head">
+          <span class="step-num">Step 3</span>
+          <span class="step-owner owner-ice">ICE</span>
+        </div>
+        <h3>メッシュ化・CADモデル化</h3>
+        <p>ノイズ除去・統合を行いメッシュを生成した後、使用目的に応じてサーフェス／ソリッドモデルへ再構築します。単なる形状トレースではなく、設計意図を踏まえたモデル化を行います。</p>
+        <div class="step-deliverables"><span>成果物</span>メッシュモデル・CADモデル（サーフェス／ソリッド）</div>
+      </li>
+
+      <li class="step reveal" data-owner="both">
+        <div class="step-head">
+          <span class="step-num">Step 4</span>
+          <span class="step-owner owner-both">ICE＋顧客</span>
+        </div>
+        <h3>精度検証・合否確認</h3>
+        <p>点群とCADモデルを照合し、偏差をカラーマップ等で可視化して定量化します。事前に合意した保証レベルに対する合否を、お客様と一緒に確認します。</p>
+        <div class="step-deliverables"><span>成果物</span>精度検証レポート（偏差マップ・数値）</div>
+      </li>
+
+      <li class="step reveal" data-owner="ice">
+        <div class="step-head">
+          <span class="step-num">Step 5</span>
+          <span class="step-owner owner-ice">ICE</span>
+        </div>
+        <h3>成果物納品</h3>
+        <p>点群・メッシュ・CADモデル・精度レポート（・2D図面）を一式納品します。以降の補修・更新・新規設計のいずれにも使える形でデータ資産をお引き渡しします。</p>
+        <div class="step-deliverables"><span>成果物</span>納品データ一式・取扱い説明資料</div>
+      </li>
+
+      <li class="step reveal" data-owner="both">
+        <div class="step-head">
+          <span class="step-num">Step 6</span>
+          <span class="step-owner owner-both">ICE＋製作パートナー</span>
+        </div>
+        <h3>エンジニアリング・ハードウェア展開</h3>
+        <p>納品データを起点に、強度・剛性の検討、改善提案、補修部品の製作、治具更新へと展開します。データがあるからこそ、従来は「現物合わせ」だった領域を設計課題として扱えます。</p>
+        <div class="step-deliverables"><span>成果物</span>検討書・改善提案書・製作部品・更新治具</div>
+      </li>
+    </ol>
+
+    <div class="process-legend reveal">
+      <span class="legend-item"><span class="owner-dot dot-customer"></span>顧客主体</span>
+      <span class="legend-item"><span class="owner-dot dot-ice"></span>ICE 担当</span>
+      <span class="legend-item"><span class="owner-dot dot-partner"></span>パートナー担当</span>
+      <span class="legend-item"><span class="owner-dot dot-both"></span>協業</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     8. 使用目的・環境の確認項目（チェックリスト）
+════════════════════════════════════════════════ -->
+<section class="section section-checklist" id="checklist">
+  <div class="container container-wide">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">07 — CHECKLIST</p>
+      <h2 class="section-title">使用目的・環境の確認項目</h2>
+      <p class="section-lead">計測計画を策定する前に、必ず確認・合意する項目です。<br class="pc-only">打合せの議事録としてそのまま使えるよう、チェックリスト形式で整理しています。</p>
+    </header>
+
+    <div class="checklist-intro reveal">
+      <div class="cl-progress" role="status" aria-live="polite">
+        <span class="cl-progress-label">確認進捗 <strong id="cl-count">0 / 28</strong></span>
+        <div class="cl-progress-bar"><div class="cl-progress-fill" id="cl-bar"></div></div>
+        <span class="cl-progress-note">※ 進捗はブラウザ内での目安です（外部送信なし）</span>
+      </div>
+      <p class="cl-usage">チェックを入れていただければ、お見積り・計測計画の精度が上がります。そのまま印刷して打合せにご活用ください。</p>
+    </div>
+
+    <div class="checklist-grid">
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">A</span>対象治具の用途</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>溶接品質の確保（溶接位置・電極加圧の安定）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>位置決め（部品の基準・心出しの役割）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>クランプ（挟持・固定の動作を含む）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他の用途 <input type="text" class="cl-freetext" placeholder="記入欄" aria-label="その他の用途の自由記述"></span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">B</span>要求精度</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>測定精度と必要とされるモデル精度の区別を認識済み</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>位置決め部・基準面の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.1mm" aria-label="位置決め部の精度目安"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他部位の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.5mm" aria-label="その他部位の精度目安"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>合否判定の方法（全数検査／抜取り検査）を取り決め済み</span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">C</span>使用環境</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>温度条件（常温／高温環境） <input type="text" class="cl-freetext" placeholder="例：常温" aria-label="温度条件"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>油・粉塵等の付着の有無と程度</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>振動の有無（計測への影響評価を含む）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>レイアウト制約（治具周辺の作業スペース・搬入経路）</span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">D</span>既存図面・3Dデータの有無</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>既存図面の有無（全部／一部／なし）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>既存3Dデータの有無（CADデータ・解析用メッシュ等）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>過去の計測記録・精度検証記録の有無</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>参照できる類似治具の図面・実績の有無</span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">E</span>稼働状況と計測可能時間</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>治具の稼働状況（稼働中／待機中／退避済）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>ライン停止の可否（停止可／不可／時間帯限定）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>計測可能な時間帯・時間数 <input type="text" class="cl-freetext" placeholder="例：メンテ夜勤 20:00-24:00" aria-label="計測可能時間"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>治具の搬出可否（持ち出して計測する余地）</span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">F</span>対象点数・優先順位、予算・納期イメージ</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>対象治具の点数 <input type="text" class="cl-freetext" placeholder="例：12台" aria-label="対象点数"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>優先順位（先行着手する治具の選定）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>予算イメージ（概算レベルで可）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>納期イメージ（希望日程・制約）</span></label>
+      </fieldset>
+
+      <fieldset class="cl-group reveal">
+        <legend><span class="cl-group-num">G</span>ゴール（最終目的）</legend>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>現状把握（精度劣化の定量化・記録化）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>補修部品の製作（現物合わせからの脱却）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>治具の更新（一部改修／リプレース計画）</span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>新規設計のベース（類似治具・次期設計の入力）</span></label>
+      </fieldset>
+    </div>
+
+    <div class="checklist-footer reveal">
+      <p>ご記入いただいた内容は、Step 1 の計測計画・お見積りに直接反映されます。不明な項目は空白のままでも構いません — 打合せで一緒に埋めることも可能です。</p>
+      <a href="#contact" class="btn btn-primary">チェックリストの内容を相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     9. 体制図
+════════════════════════════════════════════════ -->
+<section class="section section-organization" id="organization">
+  <div class="container">
+    <header class="section-header reveal">
+      <p class="section-eyebrow">08 — ORGANIZATION</p>
+      <h2 class="section-title">体制 — 3者の役割分担</h2>
+      <p class="section-lead">H-ONE 様・ICE・ナベヤ製作所の三者で、役割と責任範囲を明確に分担します。</p>
+    </header>
+
+    <div class="org-wrap reveal">
+      <svg class="org-svg" viewBox="0 0 900 560" role="img" aria-labelledby="org-title org-desc">
+        <title id="org-title">体制図</title>
+        <desc id="org-desc">H-ONE（顧客）と ICE（窓口・エンジニアリング・プロジェクト管理）、ナベヤ製作所（計測）の関係を示す体制図。ICEが両者の間に立ち、顧客との窓口とプロジェクト管理を担う。</desc>
+        <defs>
+          <marker id="org-arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <path d="M0 0 L9 4.5 L0 9 z" fill="#8fa3b8"/>
+          </marker>
+        </defs>
+
+        <!-- H-ONE（顧客） -->
+        <g class="org-node" transform="translate(50,40)">
+          <rect class="org-box org-box-customer" width="220" height="180" rx="10"/>
+          <text class="org-role" x="110" y="34" text-anchor="middle">顧客</text>
+          <text class="org-name" x="110" y="72" text-anchor="middle">H-ONE</text>
+          <text class="org-duty" x="110" y="104" text-anchor="middle">・使用目的・環境の確定</text>
+          <text class="org-duty" x="110" y="128" text-anchor="middle">・保証レベルの合意</text>
+          <text class="org-duty" x="110" y="152" text-anchor="middle">・計測立会・合否確認</text>
+        </g>
+
+        <!-- ICE（中央） -->
+        <g class="org-node" transform="translate(340,180)">
+          <rect class="org-box org-box-ice" width="220" height="200" rx="10"/>
+          <text class="org-role" x="110" y="34" text-anchor="middle">窓口・エンジニアリング</text>
+          <text class="org-name" x="110" y="72" text-anchor="middle">ICE</text>
+          <text class="org-duty" x="110" y="104" text-anchor="middle">・計測計画・データ処理</text>
+          <text class="org-duty" x="110" y="128" text-anchor="middle">・CADモデル化・精度検証</text>
+          <text class="org-duty" x="110" y="152" text-anchor="middle">・図面化・エンジニアリング</text>
+          <text class="org-duty" x="110" y="176" text-anchor="middle">・プロジェクト管理</text>
+        </g>
+
+        <!-- ナベヤ製作所（計測） -->
+        <g class="org-node" transform="translate(630,40)">
+          <rect class="org-box org-box-partner" width="220" height="180" rx="10"/>
+          <text class="org-role" x="110" y="34" text-anchor="middle">計測</text>
+          <text class="org-name org-name-sm" x="110" y="72" text-anchor="middle">ナベヤ製作所</text>
+          <text class="org-duty" x="110" y="104" text-anchor="middle">・点群データ取得（岐阜県）</text>
+          <text class="org-duty org-duty-sm" x="110" y="128" text-anchor="middle">・FAROアーム等／レーザートラッカー</text>
+          <text class="org-duty" x="110" y="152" text-anchor="middle">・計測立会・初期データ確認</text>
+        </g>
+
+        <!-- H-ONE ⇄ ICE -->
+        <path class="org-link" d="M270 110 C 310 110, 310 250, 340 260" fill="none" marker-end="url(#org-arrow)"/>
+        <path class="org-link org-link-dashed" d="M340 300 C 310 300, 310 130, 272 128" fill="none" marker-end="url(#org-arrow)"/>
+        <text class="org-link-label" x="232" y="196">要件・合意</text>
+        <text class="org-link-label" x="244" y="216">成果物・報告</text>
+
+        <!-- ICE ⇄ ナベヤ -->
+        <path class="org-link" d="M560 260 C 590 250, 590 110, 628 108" fill="none" marker-end="url(#org-arrow)"/>
+        <path class="org-link org-link-dashed" d="M630 130 C 600 140, 600 300, 562 300" fill="none" marker-end="url(#org-arrow)"/>
+        <text class="org-link-label" x="590" y="196">計測計画</text>
+        <text class="org-link-label" x="584" y="216">点群データ</text>
+
+        <!-- 責任範囲の注記 -->
+        <g class="org-footnote">
+          <rect x="50" y="430" width="800" height="100" rx="8" class="org-note-box"/>
+          <text x="70" y="462" class="org-note-title">ICE が一手に引き受けること</text>
+          <text x="70" y="490" class="org-note-text">・ご契約窓口の一本化（計測〜モデル化〜エンジニアリングまで）　・計測計画の策定と品質管理　・成果物の統一フォーマットでの納品</text>
+          <text x="70" y="514" class="org-note-text">・進捗・課題の定期報告（週次または随時）　・機密情報の管理（点群データ・図面の取り扱い規定に基づく）</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════
+     10. CTA / お問い合わせ
+════════════════════════════════════════════════ -->
+<section class="section section-contact" id="contact">
+  <div class="container">
+    <div class="contact-card reveal">
+      <div class="contact-copy">
+        <p class="section-eyebrow">09 — CONTACT</p>
+        <h2 class="contact-title">まずは1台から、<br>トライアル計測をご提案します</h2>
+        <p class="contact-lead">対象治具・ご希望のゴールを伺えば、計測計画と費用の概算を迅速にご提示します。はじめの相談だけなら、ライン情報・図面などの機密情報は必要ありません。</p>
+        <ul class="contact-points">
+          <li><span class="cp-num">1</span>まずはヒアリング（30分程度）で使用目的・環境を整理</li>
+          <li><span class="cp-num">2</span>計測計画書と概算をお渡しします（相談のみでも可）</li>
+          <li><span class="cp-num">3</span>1台からのトライアル計測で精度・成果物を実感してから本格化を判断</li>
+        </ul>
+        <div class="contact-actions">
+          <a href="https://www.icej.co.jp/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">ICE 公式サイト（icej.co.jp）</a>
+          <button type="button" class="btn btn-ghost btn-lg" id="print-btn">この提案資料を印刷 / PDF保存</button>
+        </div>
+        <p class="contact-note">お問い合わせは ICE 担当窓口までお気軽にどうぞ。資料の内容についてご質問がある場合も、上記サイトのお問い合わせフォームよりご連絡ください。</p>
+      </div>
+
+      <div class="contact-visual" aria-hidden="true">
+        <svg viewBox="0 0 260 340" aria-hidden="true" focusable="false">
+          <!-- 治具の点群イメージ（簡略化） -->
+          <g class="cv-cloud">
+            <circle cx="70" cy="70" r="2"/><circle cx="82" cy="66" r="2"/><circle cx="94" cy="70" r="2"/><circle cx="106" cy="66" r="2"/><circle cx="118" cy="70" r="2"/>
+            <circle cx="74" cy="80" r="2"/><circle cx="86" cy="84" r="2"/><circle cx="98" cy="80" r="2"/><circle cx="110" cy="84" r="2"/><circle cx="122" cy="80" r="2"/>
+            <circle cx="70" cy="92" r="2"/><circle cx="82" cy="96" r="2"/><circle cx="94" cy="92" r="2"/><circle cx="106" cy="96" r="2"/><circle cx="118" cy="92" r="2"/>
+            <circle cx="130" cy="60" r="2"/><circle cx="142" cy="56" r="2"/><circle cx="154" cy="60" r="2"/><circle cx="166" cy="56" r="2"/>
+            <circle cx="134" cy="72" r="2"/><circle cx="146" cy="76" r="2"/><circle cx="158" cy="72" r="2"/><circle cx="170" cy="76" r="2"/>
+            <circle cx="60" cy="120" r="2"/><circle cx="72" cy="124" r="2"/><circle cx="84" cy="120" r="2"/><circle cx="96" cy="124" r="2"/>
+            <circle cx="110" cy="112" r="2"/><circle cx="122" cy="116" r="2"/><circle cx="134" cy="112" r="2"/><circle cx="146" cy="116" r="2"/>
+            <circle cx="160" cy="104" r="2"/><circle cx="172" cy="108" r="2"/><circle cx="184" cy="104" r="2"/>
+            <circle cx="66" cy="140" r="2"/><circle cx="78" cy="144" r="2"/><circle cx="90" cy="140" r="2"/><circle cx="102" cy="144" r="2"/>
+            <circle cx="118" cy="132" r="2"/><circle cx="130" cy="136" r="2"/><circle cx="142" cy="132" r="2"/>
+            <circle cx="156" cy="124" r="2"/><circle cx="168" cy="128" r="2"/><circle cx="180" cy="124" r="2"/><circle cx="192" cy="128" r="2"/>
+            <circle cx="60" cy="160" r="2"/><circle cx="72" cy="164" r="2"/><circle cx="84" cy="160" r="2"/><circle cx="96" cy="164" r="2"/>
+            <circle cx="110" cy="152" r="2"/><circle cx="122" cy="156" r="2"/><circle cx="134" cy="152" r="2"/><circle cx="146" cy="156" r="2"/>
+            <circle cx="158" cy="144" r="2"/><circle cx="170" cy="148" r="2"/><circle cx="182" cy="144" r="2"/>
+            <circle cx="62" cy="180" r="2"/><circle cx="74" cy="184" r="2"/><circle cx="86" cy="180" r="2"/><circle cx="98" cy="184" r="2"/>
+            <circle cx="112" cy="172" r="2"/><circle cx="124" cy="176" r="2"/><circle cx="136" cy="172" r="2"/>
+            <circle cx="150" cy="164" r="2"/><circle cx="162" cy="168" r="2"/><circle cx="174" cy="164" r="2"/>
+          </g>
+          <!-- スキャンライン -->
+          <line x1="30" y1="0" x2="30" y2="340" class="cv-scan"/>
+          <rect x="18" y="148" width="24" height="14" rx="3" class="cv-scan-head"/>
+          <text x="30" y="158" text-anchor="middle" class="cv-scan-label">SCAN</text>
+          <rect x="46" y="30" width="186" height="280" rx="6" class="cv-frame"/>
+          <text x="46" y="330" class="cv-caption">POINT CLOUD — ASSY JIG</text>
+        </svg>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="footer-brand">ICE <span>株式会社アイシーイー</span></p>
+        <p class="footer-note">本資料は提案用LPです。記載の計測精度（約0.05mm／約0.1mm）は測定機仕様に基づく目安であり、実測値を保証するものではありません。</p>
+        <p class="footer-links">
+          <a href="#hero">ページ上部へ戻る</a><span class="footer-sep">|</span>
+          <a href="https://www.icej.co.jp/" target="_blank" rel="noopener noreferrer">icej.co.jp</a>
+        </p>
+        <p class="footer-copy"><small>© 株式会社アイシーイー — 提案資料（H-ONE 様向け）</small></p>
+      </div>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
