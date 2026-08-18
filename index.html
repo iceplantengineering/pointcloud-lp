@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -14,11 +14,11 @@
 ════════════════════════════════════════════════ -->
 <header class="site-header">
   <div class="header-inner">
-    <a href="#hero" class="brand" aria-label="ICE アイ・シー・エンジニアリング株式会社 トップへ">
+    <a href="#hero" class="brand" aria-label="ICE アイ・シー・エンジニアリング株式会社 トップへ" data-i18n-attr="ICE アイ・シー・エンジニアリング株式会社 トップへ" data-i18n-attr-name="aria-label">
       <img class="brand-logo" src="images/ice-logo.png" alt="アイ・シー・エンジニアリング株式会社" width="96" height="44">
     </a>
 
-    <nav class="gnav" id="gnav" aria-label="セクションナビゲーション">
+    <nav class="gnav" id="gnav" aria-label="セクションナビゲーション" data-i18n-attr="セクションナビゲーション" data-i18n-attr-name="aria-label">
       <a href="#challenges">課題</a>
       <a href="#service">サービス全体像</a>
       <a href="#measurement">計測体制</a>
@@ -30,7 +30,11 @@
       <a href="#contact" class="gnav-cta">お問い合わせ</a>
     </nav>
 
-    <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く">
+    <button class="lang-toggle" id="lang-toggle" type="button" aria-label="言語切り替え / Switch language" aria-pressed="false">
+      <span class="lang-opt is-active" data-lang="ja">JP</span><span class="lang-slash">/</span><span class="lang-opt" data-lang="en">EN</span>
+    </button>
+
+    <button class="hamburger" id="hamburger" type="button" aria-expanded="false" aria-controls="gnav" aria-label="メニューを開く" data-i18n-attr="メニューを開く" data-i18n-attr-name="aria-label">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -267,7 +271,7 @@
     </div>
 
     <!-- モバイル向けフロー（HTML版。PCでは非表示） -->
-    <ol class="flow-mobile" aria-label="ワンストップフロー（一覧）">
+    <ol class="flow-mobile" aria-label="ワンストップフロー（一覧）" data-i18n-attr="ワンストップフロー（一覧）" data-i18n-attr-name="aria-label">
       <li class="fm-item fm-partner"><span class="fm-num">1</span><div><strong>点群データ取得</strong><br><small>FAROアーム等／レーザートラッカーによる計測（ナベヤ製作所担当）</small></div></li>
       <li class="fm-item fm-ice"><span class="fm-num">2</span><div><strong>メッシュ化</strong><br><small>ノイズ除去・統合・簡略化、STL／ポリゴンモデル生成（ICE＋JIT）</small></div></li>
       <li class="fm-item fm-ice"><span class="fm-num">3</span><div><strong>CADモデル化</strong><br><small>サーフェス／ソリッド・設計意図を踏まえた再構築（ICE＋JIT）</small></div></li>
@@ -621,20 +625,20 @@
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>溶接品質の確保（溶接位置・電極加圧の安定）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>位置決め（部品の基準・心出しの役割）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>クランプ（挟持・固定の動作を含む）</span></label>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他の用途 <input type="text" class="cl-freetext" placeholder="記入欄" aria-label="その他の用途の自由記述"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他の用途 <input type="text" class="cl-freetext" placeholder="記入欄" aria-label="その他の用途の自由記述" data-i18n-attr="その他の用途の自由記述" data-i18n-attr-name="aria-label" data-i18n-attr="記入欄" data-i18n-attr-name="placeholder"></span></label>
       </fieldset>
 
       <fieldset class="cl-group reveal">
         <legend><span class="cl-group-num">B</span>要求精度</legend>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>測定精度と必要とされるモデル精度の区別を認識済み</span></label>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>位置決め部・基準面の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.1mm" aria-label="位置決め部の精度目安"></span></label>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他部位の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.5mm" aria-label="その他部位の精度目安"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>位置決め部・基準面の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.1mm" aria-label="位置決め部の精度目安" data-i18n-attr="位置決め部の精度目安" data-i18n-attr-name="aria-label" data-i18n-attr="例：±0.1mm" data-i18n-attr-name="placeholder"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>その他部位の精度目安 <input type="text" class="cl-freetext" placeholder="例：±0.5mm" aria-label="その他部位の精度目安" data-i18n-attr="その他部位の精度目安" data-i18n-attr-name="aria-label" data-i18n-attr="例：±0.5mm" data-i18n-attr-name="placeholder"></span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>合否判定の方法（全数検査／抜取り検査）を取り決め済み</span></label>
       </fieldset>
 
       <fieldset class="cl-group reveal">
         <legend><span class="cl-group-num">C</span>使用環境</legend>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>温度条件（常温／高温環境） <input type="text" class="cl-freetext" placeholder="例：常温" aria-label="温度条件"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>温度条件（常温／高温環境） <input type="text" class="cl-freetext" placeholder="例：常温" aria-label="温度条件" data-i18n-attr="温度条件" data-i18n-attr-name="aria-label" data-i18n-attr="例：常温" data-i18n-attr-name="placeholder"></span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>油・粉塵等の付着の有無と程度</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>振動の有無（計測への影響評価を含む）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>レイアウト制約（治具周辺の作業スペース・搬入経路）</span></label>
@@ -652,13 +656,13 @@
         <legend><span class="cl-group-num">E</span>稼働状況と計測可能時間</legend>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>治具の稼働状況（稼働中／待機中／退避済）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>ライン停止の可否（停止可／不可／時間帯限定）</span></label>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>計測可能な時間帯・時間数 <input type="text" class="cl-freetext" placeholder="例：メンテ夜勤 20:00-24:00" aria-label="計測可能時間"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>計測可能な時間帯・時間数 <input type="text" class="cl-freetext" placeholder="例：メンテ夜勤 20:00-24:00" aria-label="計測可能時間" data-i18n-attr="計測可能時間" data-i18n-attr-name="aria-label" data-i18n-attr="例：メンテ夜勤 20:00-24:00" data-i18n-attr-name="placeholder"></span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>治具の搬出可否（持ち出して計測する余地）</span></label>
       </fieldset>
 
       <fieldset class="cl-group reveal">
         <legend><span class="cl-group-num">F</span>対象点数・優先順位、予算・納期イメージ</legend>
-        <label class="cl-item"><input type="checkbox" class="cl-check"><span>対象治具の点数 <input type="text" class="cl-freetext" placeholder="例：12台" aria-label="対象点数"></span></label>
+        <label class="cl-item"><input type="checkbox" class="cl-check"><span>対象治具の点数 <input type="text" class="cl-freetext" placeholder="例：12台" aria-label="対象点数" data-i18n-attr="対象点数" data-i18n-attr-name="aria-label" data-i18n-attr="例：12台" data-i18n-attr-name="placeholder"></span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>優先順位（先行着手する治具の選定）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>予算イメージ（概算レベルで可）</span></label>
         <label class="cl-item"><input type="checkbox" class="cl-check"><span>納期イメージ（希望日程・制約）</span></label>
@@ -846,5 +850,6 @@
 </main>
 
 <script src="js/main.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>

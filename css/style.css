@@ -136,6 +136,36 @@ a:hover { text-decoration: underline; }
 }
 .gnav-cta:hover { background: var(--deep-dark) !important; }
 
+/* 言語切り替え（JP / EN） */
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 3px;
+  margin-left: 8px;
+  padding: 5px 12px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: #fff; color: var(--deep);
+  font-size: 12px; font-weight: 700; letter-spacing: .05em;
+  cursor: pointer; transition: border-color .2s, box-shadow .2s;
+  flex-shrink: 0;
+}
+.lang-toggle:hover { border-color: var(--ice-blue); box-shadow: 0 0 0 2px rgba(23, 107, 255, .12); }
+.lang-toggle:focus-visible { outline: 2px solid var(--ice-blue); outline-offset: 2px; }
+.lang-opt { color: var(--text-sub); transition: color .2s; }
+.lang-opt.is-active { color: var(--deep); }
+.lang-slash { color: var(--line-strong, #b9c6d4); font-weight: 400; }
+
+/* 英語モード時のSVG図内フォント微調整（テキストがボックスに収まるように） */
+html.lang-en .node-title { font-size: 11.5px; }
+html.lang-en .node-sub { font-size: 10px; }
+html.lang-en .node-owner { font-size: 10px; }
+html.lang-en .flow-legend text, html.lang-en .legend-text { font-size: 11px; }
+html.lang-en .deliverable-text { font-size: 11px; }
+html.lang-en .note-text { font-size: 10.5px; }
+html.lang-en .org-role { font-size: 10.5px; }
+html.lang-en .org-duty { font-size: 10.5px; }
+html.lang-en .org-name-sm { font-size: 16px; }
+html.lang-en .org-link-label { font-size: 10px; }
+html.lang-en .org-note-text { font-size: 10.5px; }
+
 /* ハンバーガー（モバイルのみ表示） */
 .hamburger {
   display: none;

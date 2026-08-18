@@ -124,7 +124,49 @@ check('点群SVG生成の実装', js.includes('pointcloud-svg'));
 check('スムーススクロール', /scroll-behavior:\s*smooth/.test(css));
 check('reduced-motion 対応', /prefers-reduced-motion/.test(css));
 
-/* ── JS構文チェックは node --check で別途実施 ── */
+/* ── 日本語 / English 切替（i18n） ── */
+console.log('\n[7] 言語切替（i18n）');
+const i18n = read('js/i18n.js');
+
+// 辞書オブジェクトを抽出
+const dictBlock = i18n.match(/var I18N_EN = (\{[\s\S]*?\n  \})/);
+let dict = {};
+if (dictBlock) {
+  try { dict = eval('(' + dictBlock[1] + ')'); } catch (e) { dict = {}; }
+}
+check('i18n.js の辞書が読み込める', Object.keys(dict).length > 100, 'エントリ数: ' + Object.keys(dict).length);
+check('言語切替ボタン（#lang-toggle）が存在', /id="lang-toggle"/.test(html));
+check('i18n.js が読み込まれている', /<script src="js\/i18n\.js"><\/script>/.test(html));
+check('html lang="ja" が既定', /<html lang="ja">/.test(html));
+check('localStorage 保存ロジック', i18n.includes('localStorage') && i18n.includes('pointcloud-lp-lang'));
+
+// data-i18n-attr のキーが全て辞書にあるか
+const attrKeys = [...html.matchAll(/data-i18n-attr="([^"]+)"/g)].map((m) => m[1]);
+const attrMissing = attrKeys.filter((k) => !dict[k]);
+check('属性キーが全て辞書にある', attrMissing.length === 0, '欠落: ' + attrMissing.join(' / '));
+
+// 日本語テキストノードが全て辞書にあるか（簡易トークナイザ）
+const tokens = [];
+const tre = /<!--[\s\S]*?-->|<\/[a-zA-Z][^>]*>|<[a-zA-Z][^>]*>|[^<]+/g;
+let tm;
+while ((tm = tre.exec(html))) tokens.push(tm[0]);
+const normT = (s) => s.replace(/\s+/g, ' ').trim();
+const hasJP = (s) => /[ぁ-んァ-ヶ一-龠]/.test(s);
+const jpNodes = new Set();
+let skip = 0;
+for (const t of tokens) {
+  if (t.startsWith('<!--')) continue;
+  if (t.startsWith('</')) { const tag = t.match(/^<\/([a-zA-Z][a-zA-Z0-9]*)/)[1]; if (['script', 'style'].includes(tag)) skip = Math.max(0, skip - 1); continue; }
+  if (t.startsWith('<')) { const tag = t.match(/^<([a-zA-Z][a-zA-Z0-9]*)/); if (tag && ['script', 'style'].includes(tag[1])) skip++; continue; }
+  if (skip === 0) { const n = normT(t); if (n.length >= 1 && hasJP(n)) jpNodes.add(n); }
+}
+const textMissing = [...jpNodes].filter((k) => !dict[k]);
+check('日本語テキストが全て辞書にある（' + jpNodes.size + '件）', textMissing.length === 0, '欠落: ' + textMissing.slice(0, 8).join(' / '));
+
+// EN値に日本語が残っていないか（プロパー名の日本語なしを確認）
+const jpInEn = Object.entries(dict).filter(([, v]) => hasJP(v)).map(([k]) => k);
+check('英語訳に日本語文字が残っていない', jpInEn.length === 0, '該当: ' + jpInEn.slice(0, 5).join(' / '));
+
 
 console.log('\n' + '─'.repeat(60));
 console.log('結果: ' + pass + ' PASS / ' + fail + ' FAIL');
