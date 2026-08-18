@@ -76,7 +76,9 @@ check('外部リソースの読み込みがない', resourceLoads.length === 0,
   resourceLoads.join(', '));
 check('CSS参照が相対パス', /<link[^>]+href="css\/style\.css"/.test(html));
 check('JS参照が相対パス', /<script src="js\/main\.js">/.test(html));
-check('img タグ不使用', !/<img[\s>]/.test(html));
+// 画像はローカルファイル（images/）のみ許可。外部URLからの読み込みは禁止
+const imgs = [...html.matchAll(/<img[^>]*src="([^"]+)"/g)].map((m) => m[1]);
+check('img はローカルファイルのみ（外部読み込みなし）', imgs.length >= 1 && imgs.every((s) => !/^(https?:)?\/\//.test(s)), imgs.join(', '));
 
 /* ── 必須記載事項 ── */
 console.log('\n[4] 必須記載事項');

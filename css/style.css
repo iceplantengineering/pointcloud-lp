@@ -117,10 +117,7 @@ a:hover { text-decoration: underline; }
 }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--deep); min-width: 0; }
 .brand:hover { text-decoration: none; }
-.brand-mark { display: inline-flex; color: var(--deep); }
-.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
-.brand-name { font-size: 20px; font-weight: 800; letter-spacing: .08em; }
-.brand-sub { font-size: 10.5px; color: var(--text-sub); letter-spacing: .04em; }
+.brand-logo { display: block; height: 44px; width: auto; max-width: 220px; object-fit: contain; }
 
 .gnav { display: flex; align-items: center; gap: 4px; }
 .gnav a {
